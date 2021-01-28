@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_53"
+        android:background="@drawable/rec_5_top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="end"
+            android:paddingStart="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:paddingBottom="@dimen/dp_4"
+            android:src="@drawable/imui_ic_screen_close" />
+
+        <com.cymjoe.testfiosdialogfragmentdemo.iosdialogfragment.CustomScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never">
+
+            <WebView
+                android:id="@+id/rich"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.cymjoe.testfiosdialogfragmentdemo.iosdialogfragment.CustomScrollView>
+
+        <com.cymjoe.testfiosdialogfragmentdemo.iosdialogfragment.CustomRecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="7" />
+    </LinearLayout>
+
+</LinearLayout>
